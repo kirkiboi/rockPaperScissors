@@ -1,0 +1,145 @@
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    background-color: papayawhip;
+}
+.container{
+    padding: 1em;
+    text-align: center;
+}
+.photo-holder{
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
+    margin-bottom: 4em;
+    justify-content: center;
+}
+.left-button,
+.right-button{
+    background-color: white;
+    border-radius: 50%; 
+    width: 2em;
+    height: 2em;
+    color: black; 
+    border: solid 0.1em black;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-5%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.left-button:hover,
+.left-button:active,
+.right-button:hover,
+.right-button:active{
+    color: white;
+}
+.left-button{
+    left: 10px; 
+}
+.right-button {
+    right: 10px;
+}
+.first-photo{
+    background-image: url(images/paper.png);
+    position: relative;
+}
+.first-photo,
+.second-photo{
+    border-radius: 12px;
+    width: 20em;
+    height: 15em;
+    background-size: cover;
+    background-position: center;
+}
+button{
+    background-color: rgb(10, 10, 207);
+    color: white;
+    border: none;
+    font-size: 2em;
+    border-radius: 0.2em;
+    padding: 0.2em;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+button:hover{
+    background-color: rgb(10, 10, 147);
+    cursor: pointer;
+}
+button:active{
+    background-color: rgb(9, 9, 100);
+    transform: scale(0.97);
+}
+.score-container{
+    display: flex;
+    flex-direction: column;
+    gap:2em;
+}
+.winner{
+    font-size: 3.5em;
+}
+.user-score,
+.AI-score{
+    font-size: 1.3em;
+}
+@media screen and (max-width: 320px) {
+    .first-photo,
+.second-photo {
+    width: 100%;
+    max-width: 320px;
+    height: 240px;  
+    background-size: cover;
+    background-position: center;
+}
+    .photo-holder{
+        padding: 0.1em;
+        gap: 1em;
+        margin-bottom: 2em;
+    }
+    .winner{
+        font-size: 3em;
+    }
+    button{
+        font-size: 1.3em;
+        padding: 0.2em;
+    }
+    .user-score,
+    .AI-score{
+        font-size: 1.1em;
+    }
+    .container{
+    padding: 0.1em;
+    margin-top: 5em;
+    }
+}
+@media screen and (min-width: 321px) and (max-width:425px) {
+    .first-photo,
+    .second-photo{
+        width: 20em;
+        height: 10em;
+    }    
+    .photo-holder{
+        padding: 0.1em;
+        gap: 1em;
+        margin-bottom: 2em;
+    }
+    button{
+        font-size: 1.7em;
+        padding: 0.2em;
+    }
+    .winner{
+        font-size: 3.5em;
+    }
+    .user-score,
+    .AI-score{
+        font-size: 1.3em;
+    }
+    .container{
+    padding: 0.1em;
+    margin-top: 4em;
+    }
+}
